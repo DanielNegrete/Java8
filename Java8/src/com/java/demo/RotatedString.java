@@ -11,6 +11,7 @@ public class RotatedString {
 		String word = "happy";
 		List<String> string = new ArrayList<>(Arrays.asList(word));
 		
-		
+		String rotated = string.stream().reduce(word.substring(2,word.length()), (s, c) -> s + c);
+		System.out.println(rotated);
 	}
 }
